@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added */
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2184c2;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Adjusted */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+#turn-message, #move-count {
+    background-color: #2184c2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+#win-message {
+    font-size: 2em;
+    color: #092652;
+    text-align: center; /* Adjusted */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added */
+}
